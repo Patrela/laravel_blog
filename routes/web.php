@@ -7,6 +7,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\WooProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,10 @@ Route::resource('comments', CommentController::class)
                 ->names('comments');
 //PVR route aparte por nopertenecer al administrador
 Route::get('/comments', [CommentController::class, 'store'])->name('comments.store');
+
+Route::get('/woo/products', [WooProductController::class, 'index'])->name('products.index');
+
+
 
 //PVR Auth::routes() VA AL FINAL
 //Auth::routes();
