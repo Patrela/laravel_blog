@@ -5,9 +5,9 @@
             <!--Logo-->
             <a href="#"><img src="" alt="Logo"></a>
         </div>
-        @guest
+        @guest {{-- gest =  no autenticado --}}
         <ul class="d-flex">
-            <li class="me-2"><a href="{{route('logout')}}" class="login">Acceder</a></li>
+            <li class="me-2"><a href="{{route('login')}}" class="login">Acceder</a></li>
             <li><a href="{{route('register')}}" class="create">Crear cuenta</a></li>
         </ul>
 
@@ -29,7 +29,7 @@
 
                 <li><a class="dropdown-item" href="#">Ir al admin</a></li>
 
-                <li>
+                <li> {{-- __{'XX'} siempre se llama de un form aqui es 'logout-form'. action y Href incluyen el nombre XX de form--}}
                     <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none;">
                         @csrf
                     </form>

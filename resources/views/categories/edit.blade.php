@@ -89,7 +89,9 @@
                 </span>
                 @enderror
             </div>
-            <input type="submit" value="Modificar categoría" class="btn btn-primary">    
+            @can('category-edit')
+                <input type="submit" value="Modificar categoría" class="btn btn-primary">
+            @endcan
         </form>
 
     </div>

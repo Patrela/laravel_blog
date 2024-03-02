@@ -12,11 +12,14 @@ use App\Models\Comment;
 
 class DatabaseSeeder extends Seeder
 {
+
+
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
@@ -26,17 +29,20 @@ class DatabaseSeeder extends Seeder
         //PVR invoke seeder
         $this->call(UserSeeder::class);
 
-
         //PVR delete folder before execute
         Storage::deleteDirectory('categories');
         Storage::makeDirectory('categories');
         Storage::deleteDirectory('articles');
         Storage::makeDirectory('articles');
+
+
+
         //PVR creates 10 model examplesusing databases\factories
         User::factory(10)->create();
         Category::factory(8)->create();
         Article::factory(8)->create();
         Comment::factory(8)->create();
+
 
     }
 }

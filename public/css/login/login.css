@@ -4,14 +4,14 @@
 }
 
 .form{
-    background:#FFF;
+    background:#FFF; /* background = #FFF;*/
     margin-top: 140px;
     padding: 3px;
 }
 
 h2{
     text-align: center;
-    color: #343A40;
+    color:#ec6868; /*color: #343A40; */
     font-size: 40px;
     font-weight: 400;
     margin-top: 20px;
@@ -28,8 +28,8 @@ input[type="password"] {
     outline: unset;
 }
 
-.content-reset 
-.form-email, 
+.content-reset
+.form-email,
 .form-password,
 .form-password-confirm{
     font-size: 15px;
@@ -46,7 +46,7 @@ input[type="password"] {
 }
 
 .form-password-confirm{
-    margin-top: 0px !important; 
+    margin-top: 0px !important;
     margin-bottom: 20px !important;
 }
 

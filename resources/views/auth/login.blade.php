@@ -1,9 +1,18 @@
+{{--
+@push('styles')
+        <link rel="stylesheet" href="{{ asset('css/login/login.css'); }}"> <!-- mix('css/login/login.css'); - mix.sass('css/login/login.css', 'public/css') -->
+@endpush
+--}}
 <x-guest-layout>
+    <x-slot name="styles">
+        <link rel="stylesheet" href="{{ asset('css/login/login.css'); }}"> <!-- asset('css/login/login.css') mix('css/login/login.css'); - mix.sass('css/login/login.css', 'public/css') -->
+    </x-slot>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
+        <h2>PVR Login</h2>
 
         <!-- Email Address -->
         <div>

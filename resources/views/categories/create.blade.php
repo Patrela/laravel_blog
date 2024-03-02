@@ -6,7 +6,7 @@
 <h2>Crear Nueva Categoría</h2>
 @endsection
 
-@section('content') 
+@section('content')
 
 <div class="card">
     <div class="card-body">
@@ -88,7 +88,9 @@
                 @enderror
 
             </div>
-            <input type="submit" value="Crear categoría" class="btn btn-primary">
+            @can('category-create')
+                <input type="submit" value="Crear categoría" class="btn btn-primary">
+            @endcan
         </form>
     </div>
 </div>

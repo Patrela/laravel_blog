@@ -44,9 +44,20 @@
                                 {{session('status')}}
                             </div>
                         @endif
+                        <ul>
+                        @foreach ($products as $productArray)
+                            <li> {{ json_encode($productArray) }}
+                            </li>
+                            <br />
+                            <hr />
+                        @endforeach
+                        </ul>
+                        {{-- table
                         <pre>
                             {{ var_dump($products)}}
                         </pre>
+                        --}}
+
                     </div>
                 </div>
             </div>

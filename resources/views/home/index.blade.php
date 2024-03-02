@@ -4,6 +4,7 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
+    @include('layouts.navbar', ['navbar' => $navbar])
     <x-slot name="slot">
         <div class="row justify-content-center">
             <div class="col-md-8">

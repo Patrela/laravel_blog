@@ -28,6 +28,32 @@
                             <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
                         @endif
                     @endauth
+                    @guest
+                        <li><a class="nav-link" href="{{ route('login') }}">{{ ('Login') }} </a></li>
+                        <li><a class="nav-link" href="{{ route('register') }}">{{ ('Register') }}</a></li>
+                    @else
+                        <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                        <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                        <li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
+                        <li class="ms-3 nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->full_name }} <span class="caret"></span>
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    {{ ('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+
                 </div>
             @endif
 

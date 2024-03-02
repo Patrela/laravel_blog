@@ -14,6 +14,14 @@ class ArticleController extends Controller
     /**
      * Display a listing of the resource.
      */
+    function __construct()
+    {
+        $this->middleware(['permission:article-list|article-create|article-edit|article-delete'], ['only' => ['index', 'show']]);
+        $this->middleware(['permission:article-create'], ['only' => ['create', 'store']]);
+        $this->middleware(['permission:article-edit'], ['only' => ['edit', 'update']]);
+        $this->middleware(['permission:article-delete'], ['only' => ['destroy']]);
+    }
+
     public function index()
     {
         $user = Auth::user();
@@ -110,6 +118,10 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        if($article) {
+            $article->delete();
+        }
+        return redirect()->action([ArticleController::class,'index'])
+                        ->with('sucess-delete','article deleted');
     }
 }

@@ -9,11 +9,13 @@
 @section('content')
 
 <div class="card">
-    
+
     <div class="card-header">
-        <a class="btn btn-primary" href="#">Crear categoría</a>
+        @can('category-create')
+            <a class="btn btn-primary" href="#">Crear categoría</a>
+        @endcan
     </div>
-    
+
     <div class="card-body">
         <table class="table table-striped">
             <thead>
@@ -25,7 +27,7 @@
             </thead>
 
             <tbody>
-                
+
                 <tr>
                     <td></td>
                     <td>
@@ -39,11 +41,17 @@
 
 
                     <td width="10px"><a href="#"
-                            class="btn btn-primary btn-sm mb-2">Editar</a></td>
-                   
+                            class="btn btn-primary btn-sm mb-2">Editar</a>
+                            @can('category-edit')
+                                <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
+                            @endcan
+                    </td>
+
                     <td width="10px">
                         <form action="#" method="POST">
-                            <input type="submit" value="Eliminar" class="btn btn-danger btn-sm">
+                            @can('category-delete')
+                                <input type="submit" value="Eliminar" class="btn btn-danger btn-sm">
+                            @endcan
                         </form>
                     </td>
 
@@ -52,7 +60,7 @@
         </table>
 
         <div class="text-center mt-3">
-            
+
         </div>
     </div>
 </div>

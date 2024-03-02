@@ -11,6 +11,14 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware(['permission:comment-list|comment-create|comment-edit|comment-delete'], ['only' => ['index', 'show']]);
+        $this->middleware(['permission:comment-create'], ['only' => ['create', 'store']]);
+        $this->middleware(['permission:comment-edit'], ['only' => ['edit', 'update']]);
+        $this->middleware(['permission:comment-delete'], ['only' => ['destroy']]);
+    }
+    /**
     /**
      * Display a listing of the resource.
      */
