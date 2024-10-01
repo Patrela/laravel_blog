@@ -75,7 +75,7 @@ body{
 }
 
 .link-paginate .items-center{
-    background-color: #1D448E;
+    background-color: #34145C;
     padding: 5px;
     color: white;
     border-radius: 5px;
@@ -86,7 +86,7 @@ body{
     flex-direction: row;
     font-size: 1em;
     padding: 2px;
-    color: #1D448E;
+    color: #34145C;
 }
 
 .page-link{

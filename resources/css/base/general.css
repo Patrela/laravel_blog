@@ -7,7 +7,10 @@
 }
 
 body{
-    background-color: rgba(250, 245, 245, 0.6) !important;
+    /* background-color: rgba(250, 245, 245, 0.6) !important;
+    background-image: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/5baf8325-ed69-40b0-b9d2-d8c5d2bde3b0); */
+    background-image: url(https://www.master-union.com/portafolio/images/screensaver_003.jpg);
+
 }
 
 .line {
@@ -72,7 +75,7 @@ body{
 }
 
 .link-paginate .items-center{
-    background-color: #1D448E;
+    background-color: #34145C;
     padding: 5px;
     color: white;
     border-radius: 5px;
@@ -83,7 +86,7 @@ body{
     flex-direction: row;
     font-size: 1em;
     padding: 2px;
-    color: #1D448E;
+    color: #34145C;
 }
 
 .page-link{

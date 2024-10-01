@@ -10,7 +10,7 @@
 
 
 input[type="text"],
-input[type="password"], 
+input[type="password"],
 input[type="file"] {
     font-size: 15px;
     width: 100%;
@@ -32,7 +32,7 @@ input[type="file"] {
     width: 100%;
     color: white;
     font-size: 16px;
-    background: #1D448E;
+    background: #34145C;
     padding: 14px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -59,7 +59,7 @@ input[type="file"] {
 
 .link{
     text-decoration: none;
-    color: #1D448E;
+    color: #34145C;
     font-weight: 500;
 }
 

@@ -28,8 +28,8 @@ input[type="password"] {
     outline: unset;
 }
 
-.content-reset 
-.form-email, 
+.content-reset
+.form-email,
 .form-password,
 .form-password-confirm{
     font-size: 15px;
@@ -46,7 +46,7 @@ input[type="password"] {
 }
 
 .form-password-confirm{
-    margin-top: 0px !important; 
+    margin-top: 0px !important;
     margin-bottom: 20px !important;
 }
 
@@ -55,7 +55,7 @@ input[type="password"] {
     width: 85%;
     color: white;
     font-size: 16px;
-    background: #1D448E;
+    background: #34145C;
     padding: 14px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -74,7 +74,7 @@ p{
 
 .link{
     text-decoration: none;
-    color: #1D448E;
+    color: #34145C;
     font-weight: 500;
 }
 

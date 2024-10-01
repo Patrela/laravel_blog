@@ -32,12 +32,12 @@
 }
 
 .nav-item.active {
-    border-bottom: 2px solid #031b4e;
+    border-bottom: 2px solid #34145C;
     margin-bottom: -2px;
 }
 
 .nav-item.active>a {
-    color: #031b4e !important;
+    color: #34145C !important;
 }
 
 
