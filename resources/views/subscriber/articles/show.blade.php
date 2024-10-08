@@ -39,12 +39,12 @@
     </div>
 
     <div class="text-primary">
-        <h2>Comentarios</h2>
+        <h2>Comments</h2>
     </div>
     @if (Auth::check())
         @include('subscriber.comments.create')
     @else
-        <p class="alert-post">Para comentar debe iniciar sesión</p>
+        <p class="alert-post">You must login for commenting</p>
     @endif
 
     @if (session('success-error'))

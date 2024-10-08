@@ -1,7 +1,3 @@
-/* Agregar comentarios */
-
-/* Comentarios */
-
 form{
     background-color: red;
 }
@@ -63,10 +59,6 @@ form{
     border-radius: 2px;
 }
 
-
-
-
-/* Visualización de comentarios */
 
 .comments-content {
     display: flex;

@@ -57,5 +57,9 @@ Route::get('/categories/detail/{category}',[App\Http\Controllers\CategoryControl
 
 Route::post('/comments',[App\Http\Controllers\CommentController::class, 'store'])->name('comments.store');
 
+Route::get('store_link', function (){
+    \Illuminate\Support\Facades\Artisan::call('storage:link');
+    echo 'ok';
+});
 Auth::routes();
 

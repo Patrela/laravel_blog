@@ -11,15 +11,15 @@
         menubar: false,
         plugins: [
             'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
-            'checklist', 'mediaembed', 'casechange', 'export', 'formatpainter', 'pageembed', 'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage', 'advtemplate', 'ai', 'mentions', 'tinycomments', 'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography', 'inlinecss', 'markdown', 'copy', 'pastetext', 'preview', 'blockquote'
+            'copy', 'pastetext', 'preview', 'blockquote'
         ],
-        toolbar: 'undo redo pastetext copy| blocks fontfamily fontsize | bold italic underline strikethrough backcolor forecolor blockquote | link image media table mergetags codesample | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat  preview',
-        tinycomments_mode: 'embedded',
-        tinycomments_author: 'Author name',
-        mergetags_list: [
-            { value: 'First.Name', title: 'First Name' },
-            { value: 'Email', title: 'Email' },
-        ],
+        toolbar: 'undo redo pastetext copy| blocks fontfamily fontsize | bold italic underline strikethrough backcolor forecolor blockquote | link image media table codesample | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat  preview',
+        // tinycomments_mode: 'embedded',
+        // tinycomments_author: 'Author name',
+        // mergetags_list: [
+        //     { value: 'First.Name', title: 'First Name' },
+        //     { value: 'Email', title: 'Email' },
+        // ],
         codesample_languages: [
             { text: 'HTML/XML', value: 'markup' },
             { text: 'JavaScript', value: 'javascript' },

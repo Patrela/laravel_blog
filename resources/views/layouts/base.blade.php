@@ -8,7 +8,8 @@
     <link rel="icon" href="{{ asset('img/icono.ico') }}">
 
     <!-- Estilos de bootstrap -->
-   <link href="{{ mix('css/app.css')}}" rel="stylesheet" >
+   {{-- <link href="{{ mix('css/app.css')}}" rel="stylesheet" > --}}
+   <link href="{{ asset('css/app.css')}}" rel="stylesheet" >
     <!-- Estilos css generales -->
     <link href="{{ asset('css/base/general.css') }}" rel="stylesheet">
     <link href="{{ asset('css/base/menu.css') }}" rel="stylesheet">
@@ -36,7 +37,8 @@
     </div>
     @yield('scripts')
     <!-- Scripts de bootstrap -->
-    <script type="text/javascript" src="{{ mix('js/app.js')}}"></script>
+    {{-- <script type="text/javascript" src="{{ mix('js/app.js')}}"></script> --}}
+    <script type="text/javascript" src="{{ asset('js/app.js')}}"></script>
 </body>
 
 </html>
