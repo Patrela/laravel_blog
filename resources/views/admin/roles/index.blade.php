@@ -32,14 +32,20 @@
                             <td>{{ $role->id}}</td>
                             <td>{{ $role->name}}</td>
 
-                            <td width="10px"><a href="{{route('roles.edit',$role)}}" class="btn btn-primary btn-sm mb-2">Edit</a></td>
+                            <td width="10px">
+                                @can('roles.edit')
+                                    <a href="{{route('roles.edit',$role)}}" class="btn btn-primary btn-sm mb-2">Edit</a>
+                                @endcan
+                            </td>
 
                             <td width="10px">
-                                <form action="{{route('roles.destroy',$role)}}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <input type="submit" value="Delete" class="btn btn-danger btn-sm">
-                                </form>
+                                @can('roles.destroy')
+                                    <form action="{{route('roles.destroy',$role)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                                    </form>
+                                @endcan
                             </td>
                         </tr>
                     @endforeach

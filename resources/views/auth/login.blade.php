@@ -12,27 +12,24 @@
         <h2>Login</h2>
         <div class="content-login">
             <div class="input-content">
-                <input type="text" name="email" placeholder="email"
-                    value="{{ old('email') }}" autofocus>
-
-                    @error('email')
-                        <span class="text-danger">
-                            <span> * {{ $message}}</span>
-                        </span>
-                    @enderror
-
+                <span class="password-reset"> Testing: test@example.com / Test123456</span>
+            </div>
+            <div class="input-content">
+                <input type="text" name="email" placeholder="email" value="{{ old('email') }}" autofocus>
+                @error('email')
+                    <span class="text-danger">
+                        <span> * {{ $message}}</span>
+                    </span>
+                @enderror
             </div>
 
             <div class="input-content">
                 <input type="password" name="password" placeholder="password" value="">
-
                 @error('password')
-                <span class="text-danger">
-                    <span> * {{ $message}}</span>
-                </span>
-            @enderror
-
-
+                    <span class="text-danger">
+                        <span> * {{ $message}}</span>
+                    </span>
+                @enderror
             </div>
         </div>
 
@@ -41,6 +38,6 @@
         <input type="submit" value="login" class="button">
     </form>
 
-    <p>¿Don't have an account? <a href="{{ route('register')}}" class="link">Register</a></p>
+    <p>Don't have an account? <a href="{{ route('register')}}" class="link">Register</a></p>
 
 @endsection
